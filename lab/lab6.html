@@ -12,14 +12,13 @@
     힌트: 미디어쿼리에는 우선권이 없습니다. 특정도가 같으면 나중에 온 것이 이깁니다.
     꼭 들어가야 하는 것: display: grid|display:grid  repeat  @media  max-width
     */
-    @media (max-width: 768px) {
-      .grid { grid-template-columns: 1fr; }
-    }
-
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 16px;
+    }
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
