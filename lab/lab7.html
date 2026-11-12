@@ -1,18 +1,26 @@
-<!doctype html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>9주차 실습 7</title>
-  <style>
-    /*
-    실습 7 · 기본
+    :root {
+      --main: #4338ca;
+      --text: #111827;
+      --bg: #ffffff;
+      --radius: 12px;
+    }
 
-    문제: :root에 주요 색·글자색·배경색·모서리 반경을 변수로 정의하고, h1·button·.card에서 그 변수를 꺼내 쓰세요.
-    힌트: 정의는 --이름: 값; 꺼내 쓰기는 var(--이름) 입니다.
-    꼭 들어가야 하는 것: :root  --main  var(--main)  var(--radius)
-    */
-    /* 여기에 CSS를 작성하세요 */
+    h1 { color: var(--main); }
+
+    button {
+      background: var(--main);
+      color: #fff;
+      border: 0;
+      padding: 10px 20px;
+      border-radius: var(--radius);
+    }
+
+    .card {
+      background: var(--bg);
+      color: var(--text);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
   </style>
 </head>
 <body>
